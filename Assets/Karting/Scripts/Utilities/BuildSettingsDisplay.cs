@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:befc2b2866d28ebaee80d0819599757d4880fb75e643041c9772cd59050c9698
-size 623
+﻿using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace KartGame
+
+{
+    public class BuildSettingsDisplay : MonoBehaviour
+    {
+        public TextMesh buildName;
+
+        public BuildSettings buildSettings;
+        
+        void Awake()
+        
+        {
+            buildName.text = $"{buildSettings.buildName}\n{buildSettings.buildType}\n{buildSettings.shaderType}\n";
+            buildName.text += $"Resolution: {Screen.width} {Screen.height}";
+            gameObject.SetActive(false);
+                
+
+        }
+    }
+}

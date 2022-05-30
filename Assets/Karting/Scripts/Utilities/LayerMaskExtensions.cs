@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1d23ed21ebf15270d6e9f736ebdf10c59c825ba0e8db6ae7af05cae52688ffc7
-size 380
+﻿using UnityEngine;
+
+public static class LayerMaskExtensions
+{
+    /// <summary>
+    /// Checks whether a LayerMask contains the layer that the given gameobject is on.
+    /// </summary>
+    public static bool ContainsGameObjectsLayer (this LayerMask layerMask, GameObject gameObject)
+    {
+        return layerMask == (layerMask | (1 << gameObject.layer));
+    }
+}

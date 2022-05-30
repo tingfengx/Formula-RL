@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f9c51041fb50651ef2559081fa9e602f23f58cb8f809b8f66ba72f394cf905b3
-size 496
+﻿using System;
+using UnityEngine;
+
+/// <summary>
+/// An attribute that forces a public field to implement an interface.
+/// </summary>
+[AttributeUsage(AttributeTargets.Field)]
+public sealed class RequireInterfaceAttribute : PropertyAttribute
+{
+    public readonly Type type;
+
+    public RequireInterfaceAttribute(Type value)
+    {
+        if (!value.IsInterface)
+        {
+            throw new Exception("Type must be an interface!");
+        }
+        type = value;
+    }
+}

@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ba171d7cb7b65894c024d2379274611bc50bc1c5e218cc1bf65fae21066391cc
-size 399
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+
+namespace KartGame.UI
+{
+    public class LoadSceneButton : MonoBehaviour
+    {
+        [Tooltip("What is the name of the scene we want to load when clicking the button?")]
+        public string SceneName;
+
+        public void LoadTargetScene() 
+        {
+            SceneManager.LoadSceneAsync(SceneName);
+        }
+    }
+}

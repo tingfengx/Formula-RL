@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:84ad81ba4d4130795facb65a658e60871f86d568182d40d3440047133734bdf8
-size 539
+﻿using System.Collections.Generic;
+using UnityEngine;
+
+public static class ListExtensions
+{
+    /// <summary>
+    /// Gets the next element in a list including cycling back to the 0th element if at the end of the list.
+    /// </summary>
+    /// <returns>The next element in the cycle.</returns>
+    public static TElement GetNextInCycle<TElement> (this List<TElement> list, TElement element)
+    {
+        int index = list.IndexOf (element);
+        index = (index + 1) % list.Count;
+        return list[index];
+    }
+}

@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:94b963cae4267efa66d7f8daacb082f8d9bbb87db24a33e73111b734293ac8c1
-size 1048
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ObjectiveManager : MonoBehaviour
+{
+    List<Objective> m_Objectives = new List<Objective>();
+
+    public List<Objective> Objectives => m_Objectives;
+
+    public static Action<Objective> RegisterObjective;
+
+    public void OnEnable()
+    {
+        RegisterObjective += OnRegisterObjective;
+    }
+    
+    public bool AreAllObjectivesCompleted()
+    {
+        if (m_Objectives.Count == 0)
+            return false;
+
+        for (int i = 0; i < m_Objectives.Count; i++)
+        {
+            // pass every objectives to check if they have been completed
+            if (m_Objectives[i].isBlocking())
+            {
+                // break the loop as soon as we find one uncompleted objective
+                return false;
+            }
+        }
+
+        // found no uncompleted objective
+        return true;
+    }
+
+    public void OnRegisterObjective(Objective objective)
+    {
+        m_Objectives.Add(objective);
+    }
+}

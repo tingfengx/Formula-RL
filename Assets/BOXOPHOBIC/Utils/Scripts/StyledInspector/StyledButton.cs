@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c6a8daa87f029a43ab982d26b1e3defd0c0fb29f39406c445bafed7a3fe8a986
-size 604
+﻿// Cristian Pop - https://boxophobic.com/
+
+using UnityEngine;
+
+namespace Boxophobic.StyledGUI
+{
+    public class StyledButton : PropertyAttribute
+    {
+        public string Text = "";
+        public float Top = 0;
+        public float Down = 0;
+
+        public StyledButton(string Text)
+        {
+            this.Text = Text;
+            this.Top = 0;
+            this.Down = 0;
+        }
+
+        public StyledButton(string Text, float Top, float Down)
+        {
+            this.Text = Text;
+            this.Top = Top;
+            this.Down = Down;
+        }
+    }
+}
+

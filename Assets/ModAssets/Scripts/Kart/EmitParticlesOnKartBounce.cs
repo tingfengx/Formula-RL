@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bc97c250df073cf5601f0370e439f72cebbc64feb2670d200e11a1de0196ccd9
-size 620
+﻿using KartGame.KartSystems;
+using UnityEngine;
+using UnityEngine.Assertions;
+
+[RequireComponent(typeof(ParticleSystem))]
+public class EmitParticlesOnKartBounce : MonoBehaviour 
+{
+    ParticleSystem effect;
+    KartBounce vehicleBounce;
+
+    void Awake() 
+    {
+        effect = GetComponent<ParticleSystem>();
+        vehicleBounce = GetComponentInParent<KartBounce>();
+
+        Assert.IsNotNull(vehicleBounce, "This particle should be a child of a VehicleBounce!");
+    }
+
+    void Update()
+    {
+        if (vehicleBounce.BounceFlag)
+        {
+            effect.Play();
+        }
+    }
+}

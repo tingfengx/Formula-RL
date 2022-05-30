@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ec4f848ca2d5dd51c1e89f0abf92c823a91d3c684f2c0322f55c7e583974f039
-size 848
+﻿using System.Collections.Generic;
+using UnityEngine;
+
+public static class DictionaryExtensions
+{
+    /// <summary>
+    /// Checks to see if a dictionary contains a specific key and value together.
+    /// </summary>
+    /// <param name="dictionary">The dictionary to check.</param>
+    /// <param name="key">The key part of the pair to check the dictionary for.</param>
+    /// <param name="value">The value part of the pair to check the dictionary for.</param>
+    /// <returns>Returns true if the dictionary contains the key and that key has the given value.  Otherwise returns false.</returns>
+    public static bool ContainsKeyValuePair<TKey, TValue> (this Dictionary<TKey, TValue> dictionary, TKey key, TValue value)
+    {
+        return dictionary.TryGetValue (key, out TValue outValue) && value.Equals(outValue);
+    }
+}

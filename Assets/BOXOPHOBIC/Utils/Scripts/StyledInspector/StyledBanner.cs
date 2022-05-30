@@ -1,3 +1,63 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ec24a07471e05e297a86be7e9b8d9b3cd0ad803cb902c5dfe8596a1f31aa6a0f
-size 1745
+﻿using UnityEngine;
+
+namespace Boxophobic.StyledGUI
+{
+    public class StyledBanner : PropertyAttribute
+    {
+        public float colorR;
+        public float colorG;
+        public float colorB;
+        public string title;
+        public string helpURL;
+
+        public StyledBanner(string title)
+        {
+            this.colorR = -1;
+            this.title = title;
+            this.helpURL = "";
+        }
+
+        public StyledBanner(string title, string helpURL)
+        {
+            this.colorR = -1;
+            this.title = title;
+            this.helpURL = helpURL;
+        }
+
+        public StyledBanner(float colorR, float colorG, float colorB, string title)
+        {
+            this.colorR = colorR;
+            this.colorG = colorG;
+            this.colorB = colorB;
+            this.title = title;
+            this.helpURL = "";
+        }
+
+        public StyledBanner(float colorR, float colorG, float colorB, string title, string helpURL)
+        {
+            this.colorR = colorR;
+            this.colorG = colorG;
+            this.colorB = colorB;
+            this.title = title;
+            this.helpURL = helpURL;
+        }
+
+        // Legacy
+        public StyledBanner(string title, string subtitle, string helpURL)
+        {
+            this.colorR = -1;
+            this.title = title;
+            this.helpURL = helpURL;
+        }
+
+        public StyledBanner(float colorR, float colorG, float colorB, string title, string subtitle, string helpURL)
+        {
+            this.colorR = colorR;
+            this.colorG = colorG;
+            this.colorB = colorB;
+            this.title = title;
+            this.helpURL = helpURL;
+        }
+    }
+}
+

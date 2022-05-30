@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:279f6841fcc395519c44690e55caff82da1ab83799597575bce1c9d19d50e23a
-size 145
+{
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.9.0.post2"
+    }
+}

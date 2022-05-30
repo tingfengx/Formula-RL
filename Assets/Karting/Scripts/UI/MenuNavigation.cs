@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:26852f877cb289f56a300f8dcf2eabe734ef1addf0287e2fd32b7428f86544ee
-size 820
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class MenuNavigation : MonoBehaviour
+{
+    public Selectable defaultSelection;
+
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        EventSystem.current.SetSelectedGameObject(null);
+    }
+
+    void LateUpdate()
+    {
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            if (Input.GetButtonDown(GameConstants.k_ButtonNameSubmit)
+                || Input.GetAxisRaw(GameConstants.k_AxisNameHorizontal) != 0
+                || Input.GetAxisRaw(GameConstants.k_AxisNameVertical) != 0)
+            {
+                EventSystem.current.SetSelectedGameObject(defaultSelection.gameObject);
+            }
+        }
+    }
+}

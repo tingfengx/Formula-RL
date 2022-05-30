@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b5503446cedb8739932e8a5618fe3d94fb3252a94df3b272f08d3c52aedee158
-size 805
+﻿﻿using UnityEngine;
+
+public abstract class TargetObject : MonoBehaviour
+{
+    [Header("Gameplay")]
+    [Tooltip("Which game mode are you playing?")]
+    public GameMode gameMode;
+
+    [Tooltip("The amount of time the pickup gives in secs")]
+    public float TimeGained;
+
+    [Tooltip("Layers to trigger with")]
+    public LayerMask layerMask;
+
+    [Tooltip("The point at which the collect VFX is spawned")]
+    public Transform CollectVFXSpawnPoint;
+
+    [Header("Sounds")]
+
+    [Tooltip("Sound played when receiving damages")]
+    public AudioClip CollectSound;
+
+    [HideInInspector]
+    public bool active;
+
+    void OnEnable()
+    {
+        active = true;
+    }
+    
+    protected void Register()
+    {
+        Objective.OnRegisterPickup?.Invoke(this);
+    }
+}

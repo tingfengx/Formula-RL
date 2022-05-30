@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d4c249b2abfdee23f3dacef66886a1d20afd052da46f2cbd4fe5644932b663ff
-size 808
+﻿using UnityEngine;
+
+namespace Boxophobic.StyledGUI
+{
+    public class StyledEnum : PropertyAttribute
+    {
+        public string display = "";
+        public string file = "";
+        public string options = "";
+
+        public int top = 0;
+        public int down = 0;
+
+        public StyledEnum(string file, string options, int top, int down)
+        {
+            this.file = file;
+            this.options = options;
+
+            this.top = top;
+            this.down = down;
+        }
+
+        public StyledEnum(string display, string file, string options, int top, int down)
+        {
+            this.display = display;
+            this.file = file;
+            this.options = options;
+
+            this.top = top;
+            this.down = down;
+        }
+    }
+}
+

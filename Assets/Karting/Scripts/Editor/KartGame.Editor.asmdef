@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:12f5fddf8f03e84f66b525781a3badeaba8cc8dbf361ec525e81e340a2321979
-size 365
+{
+    "name": "KartGame.Editor",
+    "references": [
+        "GUID:a54b96d5ddd2c488aadb7e2cb0921b9b"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

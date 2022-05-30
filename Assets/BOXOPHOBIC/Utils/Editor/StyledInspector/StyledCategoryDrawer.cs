@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e5d3decf8d5ef19eac5dd31605563b0e09ee558f48fda4b2bea353f6b56c6e95
-size 726
+﻿// Cristian Pop - https://boxophobic.com/
+
+using UnityEngine;
+using UnityEditor;
+
+namespace Boxophobic.StyledGUI
+{
+    [CustomPropertyDrawer(typeof(StyledCategory))]
+    public class StyledCategoryAttributeDrawer : PropertyDrawer
+    {
+        StyledCategory a;
+
+        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+        {
+            a = (StyledCategory)attribute;
+
+            property.boolValue = StyledGUI.DrawInspectorCategory(a.category, property.boolValue, a.top, a.down, a.colapsable);
+        }
+
+        public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+        {
+            return -2;
+        }
+    }
+}

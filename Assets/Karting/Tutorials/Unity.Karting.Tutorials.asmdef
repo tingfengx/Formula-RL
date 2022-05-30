@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3fec99db17b1fc70ad10a4ba34c9d6c3faafa7d5fa83f50b279a57c52d25e24f
-size 455
+{
+    "name": "Unity.Karting.Tutorials",
+    "references": [
+        "GUID:149cad238efed4f53ac932b1e9555356",
+        "GUID:dca86c3434c38674a865b8fad7a81c91"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

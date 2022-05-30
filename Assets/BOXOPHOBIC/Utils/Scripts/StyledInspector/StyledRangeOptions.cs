@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f0da7e751cad16e85e96f22954a63e51b167717dd6876a86d7cca7f2dbea2b53
-size 551
+﻿// Cristian Pop - https://boxophobic.com/
+
+using UnityEngine;
+
+namespace Boxophobic.StyledGUI
+{
+    public class StyledRangeOptions : PropertyAttribute
+    {
+        public string display;
+        public float min;
+        public float max;
+        public string[] options;
+
+        public StyledRangeOptions(string display, float min, float max,  string[] options)
+        {
+            this.display = display;
+            this.min = min;
+            this.max = max;
+
+            this.options = options;
+        }
+    }
+}
+

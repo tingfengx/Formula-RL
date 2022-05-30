@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a1336df46c12120e8e97a418282b34ecd9d2159b96800604eca7181fcac3b7bb
-size 741
+﻿// Cristian Pop - https://boxophobic.com/
+
+using UnityEngine;
+using UnityEditor;
+
+namespace Boxophobic.StyledGUI
+{
+    [CustomPropertyDrawer(typeof(StyledBanner))]
+    public class StyledBannerAttributeDrawer : PropertyDrawer
+    {
+        StyledBanner a;
+
+        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+        {
+            a = (StyledBanner)attribute;
+
+            var bannerColor = new Color(a.colorR, a.colorG, a.colorB);
+
+            StyledGUI.DrawInspectorBanner(bannerColor, a.title, a.helpURL);
+        }
+
+        public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+        {
+            return -2;
+        }
+    }
+}

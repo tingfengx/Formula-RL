@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fdb158ab7b79da5f9ab6bc96742b2d489ff274c4090adcdb392706ad52133773
-size 700
+﻿// Cristian Pop - https://boxophobic.com/
+
+using UnityEngine;
+
+namespace Boxophobic.StyledGUI
+{
+    public class StyledText : PropertyAttribute
+    {
+        public string text = "";
+        public TextAnchor alignment = TextAnchor.MiddleCenter;
+        public float top = 0;
+        public float down = 0;
+
+        public StyledText()
+        {
+
+        }
+
+        public StyledText(TextAnchor alignment)
+        {
+            this.alignment = alignment;
+        }
+
+        public StyledText(TextAnchor alignment, float top, float down)
+        {
+            this.alignment = alignment;
+            this.top = top;
+            this.down = down;
+        }
+    }
+}
+

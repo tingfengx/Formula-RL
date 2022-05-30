@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:df877e32b467ccc4228e897e30834bebfa57625fa7131d60040d15f98c994eeb
-size 1169
+﻿using UnityEngine;
+
+namespace Boxophobic.StyledGUI
+{
+    public class StyledCategory : PropertyAttribute
+    {
+        public string category;
+        public float top;
+        public float down;
+        public bool colapsable;
+
+        public StyledCategory(string category)
+        {
+            this.category = category;
+            this.top = 10;
+            this.down = 10;
+            this.colapsable = false;
+        }
+
+        public StyledCategory(string category, bool colapsable)
+        {
+            this.category = category;
+            this.top = 10;
+            this.down = 10;
+            this.colapsable = colapsable;
+        }
+
+        public StyledCategory(string category, float top, float down)
+        {
+            this.category = category;
+            this.top = top;
+            this.down = down;
+            this.colapsable = false;
+        }
+
+        public StyledCategory(string category, int top, int down, bool colapsable)
+        {
+            this.category = category;
+            this.top = top;
+            this.down = down;
+            this.colapsable = colapsable;
+        }
+    }
+}
+

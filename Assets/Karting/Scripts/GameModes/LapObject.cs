@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:745efbd9c28bb16a61b097439fe28d990ac94bc82c460977fa4819ae3085fa1e
-size 711
+﻿using UnityEngine;
+
+/// <summary>
+/// This class inherits from TargetObject and represents a LapObject.
+/// </summary>
+public class LapObject : TargetObject
+{
+    [Header("LapObject")]
+    [Tooltip("Is this the first/last lap object?")]
+    public bool finishLap;
+
+    [HideInInspector]
+    public bool lapOverNextPass;
+
+    void Start() {
+        Register();
+    }
+    
+    void OnEnable()
+    {
+        lapOverNextPass = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!((layerMask.value & 1 << other.gameObject.layer) > 0 && other.CompareTag("Player")))
+            return;
+       
+        Objective.OnUnregisterPickup?.Invoke(this);
+    }
+}

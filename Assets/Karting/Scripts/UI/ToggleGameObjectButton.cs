@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:399bf2438f2d00b830946ae138642fa37844046629ee196285196fc5cd251d5e
-size 729
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
+
+public class ToggleGameObjectButton : MonoBehaviour
+{
+    public GameObject objectToToggle;
+    public GameObject mainScenekart;
+    public bool resetSelectionAfterClick;
+
+    void Update()
+    {
+        if (objectToToggle.activeSelf && Input.GetButtonDown(GameConstants.k_ButtonNameCancel))
+        {
+            SetGameObjectActive(false);
+        }
+    }
+
+    public void SetGameObjectActive(bool active)
+    {
+        objectToToggle.SetActive(active);
+
+        if (mainScenekart != null)
+            mainScenekart.SetActive(!active);
+
+        if (resetSelectionAfterClick)
+            EventSystem.current.SetSelectedGameObject(null);
+    }
+}

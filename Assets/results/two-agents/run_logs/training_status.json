@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9424393e36cf20aee78ebf2ef01694ae73791e0fbe47b57425fb92fda9ca28e4
-size 939
+{
+    "ArcadeDriver": {
+        "checkpoints": [
+            {
+                "steps": 18068,
+                "file_path": "results/two-agents/ArcadeDriver/ArcadeDriver-18068.onnx",
+                "reward": -8.816619509324052,
+                "creation_time": 1653256397.480979,
+                "auxillary_file_paths": [
+                    "results/two-agents/ArcadeDriver/ArcadeDriver-18068.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 18068,
+            "file_path": "results/two-agents/ArcadeDriver.onnx",
+            "reward": -8.816619509324052,
+            "creation_time": 1653256397.480979,
+            "auxillary_file_paths": [
+                "results/two-agents/ArcadeDriver/ArcadeDriver-18068.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.9.0.post2"
+    }
+}

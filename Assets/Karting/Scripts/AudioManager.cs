@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:370a7bce9821cfbaf62e0e096ec9bf78462cb89f85ba85ab25eb223147636de5
-size 530
+﻿using System;
+using System.Collections;
+using UnityEngine;
+using UnityEngine.Audio;
+
+public class AudioManager : MonoBehaviour
+{
+    public AudioMixer audioMixer;
+
+    public void EnsureSFXDestruction(AudioSource source)
+    {
+        StartCoroutine("DelayedSFXDestruction", source);
+    }
+
+    private IEnumerator DelayedSFXDestruction(AudioSource source)
+    {
+        while (source.isPlaying)
+        {
+            yield return null;
+        }
+
+        GameObject.Destroy(source.gameObject);
+    }
+}

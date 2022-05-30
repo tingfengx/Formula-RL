@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:90331e2f13fcb7b471c454edc69555d0d51e93dbb92251e644b073c4a7eca495
-size 625
+﻿// Cristian Pop - https://boxophobic.com/
+
+using UnityEngine;
+using UnityEditor;
+
+namespace Boxophobic.StyledGUI
+{
+    [CustomPropertyDrawer(typeof(StyledSpace))]
+    public class StyledSpaceAttributeDrawer : PropertyDrawer
+    {
+        StyledSpace a;
+
+        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+        {
+            a = (StyledSpace)attribute;
+
+            GUILayout.Space(a.space);
+        }
+
+        public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+        {
+            return -2;
+        }
+    }
+}

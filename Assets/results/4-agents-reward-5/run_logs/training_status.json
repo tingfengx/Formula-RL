@@ -1,3 +1,65 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9e8724d2c2d4ce20a6f1242939522508a632d7eac29321f6f8f7fa6f19a29068
-size 2585
+{
+    "ArcadeDriver": {
+        "checkpoints": [
+            {
+                "steps": 2999948,
+                "file_path": "results/4-agents-reward-5/ArcadeDriver/ArcadeDriver-2999948.onnx",
+                "reward": 249.2170509338379,
+                "creation_time": 1653880227.980305,
+                "auxillary_file_paths": [
+                    "results/4-agents-reward-5/ArcadeDriver/ArcadeDriver-2999948.pt"
+                ]
+            },
+            {
+                "steps": 3499997,
+                "file_path": "results/4-agents-reward-5/ArcadeDriver/ArcadeDriver-3499997.onnx",
+                "reward": 249.2660834081471,
+                "creation_time": 1653881501.2371788,
+                "auxillary_file_paths": [
+                    "results/4-agents-reward-5/ArcadeDriver/ArcadeDriver-3499997.pt"
+                ]
+            },
+            {
+                "steps": 3999948,
+                "file_path": "results/4-agents-reward-5/ArcadeDriver/ArcadeDriver-3999948.onnx",
+                "reward": 266.5253662467003,
+                "creation_time": 1653882763.938402,
+                "auxillary_file_paths": [
+                    "results/4-agents-reward-5/ArcadeDriver/ArcadeDriver-3999948.pt"
+                ]
+            },
+            {
+                "steps": 4499936,
+                "file_path": "results/4-agents-reward-5/ArcadeDriver/ArcadeDriver-4499936.onnx",
+                "reward": 209.66709954398019,
+                "creation_time": 1653884024.562958,
+                "auxillary_file_paths": [
+                    "results/4-agents-reward-5/ArcadeDriver/ArcadeDriver-4499936.pt"
+                ]
+            },
+            {
+                "steps": 4642218,
+                "file_path": "results/4-agents-reward-5/ArcadeDriver/ArcadeDriver-4642218.onnx",
+                "reward": 387.3880558013916,
+                "creation_time": 1653884439.544984,
+                "auxillary_file_paths": [
+                    "results/4-agents-reward-5/ArcadeDriver/ArcadeDriver-4642218.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4642218,
+            "file_path": "results/4-agents-reward-5/ArcadeDriver.onnx",
+            "reward": 387.3880558013916,
+            "creation_time": 1653884439.544984,
+            "auxillary_file_paths": [
+                "results/4-agents-reward-5/ArcadeDriver/ArcadeDriver-4642218.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.9.0.post2"
+    }
+}

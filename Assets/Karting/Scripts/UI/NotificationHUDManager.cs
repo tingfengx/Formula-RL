@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:df016bc95db97c3e33e738eed16c9003701b2b2402c1f18c16aac7a403f41cf9
-size 1216
+﻿using UnityEngine;
+
+public class NotificationHUDManager : MonoBehaviour
+{
+    [Tooltip("UI panel containing the layoutGroup for displaying notifications")]
+    public UITable notificationPanel;
+    [Tooltip("Prefab for the notifications")]
+    public PoolObjectDef notificationPrefab;
+    
+
+    void OnUpdateObjective(UnityActionUpdateObjective updateObjective)
+    {
+        if (!string.IsNullOrEmpty(updateObjective.notificationText))
+            CreateNotification(updateObjective.notificationText);
+    }
+
+    public void CreateNotification(string text)
+    {
+        GameObject notificationInstance = notificationPrefab.getObject(true,notificationPanel.transform);
+        notificationInstance.transform.SetSiblingIndex(0);
+
+        NotificationToast toast = notificationInstance.GetComponent<NotificationToast>();
+        toast.Initialize(text);
+        notificationPanel.UpdateTable(notificationInstance);
+
+    }
+
+    public void RegisterObjective(Objective objective)
+    {
+        objective.onUpdateObjective += OnUpdateObjective;
+    }
+
+    public void UnregisterObjective(Objective objective)
+    {
+        objective.onUpdateObjective -= OnUpdateObjective;
+    }
+}

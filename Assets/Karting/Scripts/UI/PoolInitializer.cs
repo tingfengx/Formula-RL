@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4dec74dc80a7afa5de7dd01398d61a86362c7e1af1519c1b5d4622e347977796
-size 845
+﻿using UnityEngine;
+ 
+    public class PoolInitializer : MonoBehaviour
+    {
+        public PoolObjectDef[] pools = new PoolObjectDef[0];
+        public Transform parent;
+        [Tooltip("Initialize all existing PoolObjects.")]
+        
+
+        private PoolObjectDef[] allPools;
+        public void OnEnable()
+        {
+            initialize();
+        }
+        
+        public void OnDisable()
+        {            
+            destroyAll();
+        }
+
+        public void initialize()
+        {
+            if (parent == null) parent = transform;
+
+            destroyAll();
+
+            for (int i = 0; i < pools.Length; i++) pools[i].Initialize(parent);
+
+        }
+
+        public void destroyAll()
+        {
+            for (int i = 0; i < pools.Length; i++) pools[i].destroyAll();
+        }
+
+    }
