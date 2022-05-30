@@ -1,0 +1,598 @@
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) ➜  Formula-RL git:(master) ✗ git push
+To https://github.com/tingfengx/Formula-RL.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/tingfengx/Formula-RL.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+(base) ➜  Formula-RL git:(master) ✗ git pull
+remote: Enumerating objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3
+Unpacking objects: 100% (3/3), 1002 bytes | 501.00 KiB/s, done.
+From https://github.com/tingfengx/Formula-RL
+   6657d00..1194064  master     -> origin/master
+Updating 6657d00..1194064
+Fast-forward
+ Assets/.DS_Store | Bin 8196 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 Assets/.DS_Store
+(base) ➜  Formula-RL git:(master) ✗ git push
+Everything up-to-date
+(base) ➜  Formula-RL git:(master) ✗ git commit -m"del ds store"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .gitignore
+	deleted:    Assets/BOXOPHOBIC/.DS_Store
+	deleted:    Assets/BOXOPHOBIC/Skybox Cubemap Extended/.DS_Store
+	deleted:    Assets/BOXOPHOBIC/Utils/.DS_Store
+	deleted:    Assets/Karting/.DS_Store
+	deleted:    Assets/Karting/Animations/.DS_Store
+	deleted:    Assets/Karting/Art/.DS_Store
+	deleted:    Assets/Karting/ModularTrackKit/.DS_Store
+	deleted:    Assets/Karting/Prefabs/.DS_Store
+	deleted:    Assets/Karting/Scenes/.DS_Store
+	deleted:    Assets/Karting/Scripts/.DS_Store
+	deleted:    Assets/Karting/Tutorials/.DS_Store
+	deleted:    Assets/LowPoly Environment Pack/.DS_Store
+	deleted:    Assets/LowPoly Environment Pack/Demo/.DS_Store
+	deleted:    Assets/ModAssets/.DS_Store
+	deleted:    Assets/ModAssets/Materials/.DS_Store
+	deleted:    Assets/ModAssets/Models/.DS_Store
+	deleted:    Assets/ModAssets/Prefabs/.DS_Store
+	deleted:    Assets/ModAssets/Scripts/.DS_Store
+	deleted:    Assets/TextMesh Pro/.DS_Store
+	deleted:    Assets/TextMesh Pro/Resources/.DS_Store
+	deleted:    Assets/results/.DS_Store
+	deleted:    Assets/results/4-agents-reward-1/.DS_Store
+	deleted:    Assets/results/4-agents-reward-2/.DS_Store
+	deleted:    Assets/results/4-agents-reward-3/.DS_Store
+	deleted:    Assets/results/4-agents-reward-4/.DS_Store
+	deleted:    Assets/results/4-agents-reward-5/.DS_Store
+	deleted:    Assets/results/4-agents/.DS_Store
+	deleted:    Assets/results/first_run/.DS_Store
+	deleted:    Assets/results/run_2/.DS_Store
+	deleted:    Assets/results/two-agents/.DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) ➜  Formula-RL git:(master) ✗ git add *
+The following paths are ignored by one of your .gitignore files:
+InitCodeMarker
+Library
+Logs
+Makefile
+Packages
+ProjectSettings
+UserSettings
+results
+hint: Use -f if you really want to add them.
+hint: Turn this message off by running
+hint: "git config advice.addIgnoredFile false"
+(base) ➜  Formula-RL git:(master) ✗ git commit -m"del ds store"
+[master 8ddd207] del ds store
+ 30 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 Assets/BOXOPHOBIC/.DS_Store
+ delete mode 100644 Assets/BOXOPHOBIC/Skybox Cubemap Extended/.DS_Store
+ delete mode 100644 Assets/BOXOPHOBIC/Utils/.DS_Store
+ delete mode 100644 Assets/Karting/.DS_Store
+ delete mode 100644 Assets/Karting/Animations/.DS_Store
+ delete mode 100644 Assets/Karting/Art/.DS_Store
+ delete mode 100644 Assets/Karting/ModularTrackKit/.DS_Store
+ delete mode 100644 Assets/Karting/Prefabs/.DS_Store
+ delete mode 100644 Assets/Karting/Scenes/.DS_Store
+ delete mode 100644 Assets/Karting/Scripts/.DS_Store
+ delete mode 100644 Assets/Karting/Tutorials/.DS_Store
+ delete mode 100644 Assets/LowPoly Environment Pack/.DS_Store
+ delete mode 100644 Assets/LowPoly Environment Pack/Demo/.DS_Store
+ delete mode 100644 Assets/ModAssets/.DS_Store
+ delete mode 100644 Assets/ModAssets/Materials/.DS_Store
+ delete mode 100644 Assets/ModAssets/Models/.DS_Store
+ delete mode 100644 Assets/ModAssets/Prefabs/.DS_Store
+ delete mode 100644 Assets/ModAssets/Scripts/.DS_Store
+ delete mode 100644 Assets/TextMesh Pro/.DS_Store
+ delete mode 100644 Assets/TextMesh Pro/Resources/.DS_Store
+ delete mode 100644 Assets/results/.DS_Store
+ delete mode 100644 Assets/results/4-agents-reward-1/.DS_Store
+ delete mode 100644 Assets/results/4-agents-reward-2/.DS_Store
+ delete mode 100644 Assets/results/4-agents-reward-3/.DS_Store
+ delete mode 100644 Assets/results/4-agents-reward-4/.DS_Store
+ delete mode 100644 Assets/results/4-agents-reward-5/.DS_Store
+ delete mode 100644 Assets/results/4-agents/.DS_Store
+ delete mode 100644 Assets/results/first_run/.DS_Store
+ delete mode 100644 Assets/results/run_2/.DS_Store
+ delete mode 100644 Assets/results/two-agents/.DS_Store
+(base) ➜  Formula-RL git:(master) ✗ git push
+Enumerating objects: 65, done.
+Counting objects: 100% (65/65), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (33/33), done.
+Writing objects: 100% (33/33), 2.56 KiB | 2.56 MiB/s, done.
+Total 33 (delta 24), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (24/24), completed with 24 local objects.
+To https://github.com/tingfengx/Formula-RL.git
+   1194064..8ddd207  master -> master
+(base) ➜  Formula-RL git:(master) ✗ cat .gitignore
+Library/
+InitCodeMarker
+Logs/
+Makefile
+Packages/
+ProjectSettings/
+results/
+UserSettings/
+
+.DS_Store/
+
+# Created by https://www.toptal.com/developers/gitignore/api/unity,csharp
+# Edit at https://www.toptal.com/developers/gitignore?templates=unity,csharp
+
+### Csharp ###
+## Ignore Visual Studio temporary files, build results, and
+## files generated by popular Visual Studio add-ons.
+##
+## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Mono auto generated files
+mono_crash.*
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
+
+# Visual Studio 2017 auto generated files
+Generated\ Files/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# Benchmark Results
+BenchmarkDotNet.Artifacts/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# StyleCop
+StyleCopReport.xml
+
+# Files built by Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Chutzpah Test files
+_Chutzpah*
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Visual Studio Trace Files
+*.e2e
+
+# TFS 2012 Local Workspace
+$tf/
+
+# Guidance Automation Toolkit
+*.gpState
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# TeamCity is a build add-in
+_TeamCity*
+
+# DotCover is a Code Coverage Tool
+*.dotCover
+
+# AxoCover is a Code Coverage Tool
+.axoCover/*
+!.axoCover/settings.json
+
+# Coverlet is a free, cross platform Code Coverage Tool
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+# MightyMoose
+*.mm.*
+AutoTest.Net/
+
+# Web workbench (sass)
+.sass-cache/
+
+# Installshield output folder
+[Ee]xpress/
+
+# DocProject is a documentation generator add-in
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+DocProject/Help/html
+
+# Click-Once directory
+publish/
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
+# Note: Comment the next line if you want to checkin your web deploy settings,
+# but database connection strings (with potential passwords) will be unencrypted
+*.pubxml
+*.publishproj
+
+# Microsoft Azure Web App publish settings. Comment the next line if you want to
+# checkin your Azure Web App publish settings, but sensitive information contained
+# in these scripts will be unencrypted
+PublishScripts/
+
+# NuGet Packages
+*.nupkg
+# NuGet Symbol Packages
+*.snupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+# NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
+
+# Microsoft Azure Build Output
+csx/
+*.build.csdef
+
+# Microsoft Azure Emulator
+ecf/
+rcf/
+
+# Windows Store app package directories and files
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
+*.appx
+*.appxbundle
+*.appxupload
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!?*.[Cc]ache/
+
+# Others
+ClientBin/
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.pfx
+*.publishsettings
+orleans.codegen.cs
+
+# Including strong name files can present a security risk
+# (https://github.com/github/gitignore/pull/2483#issue-259490424)
+#*.snk
+
+# Since there are multiple workflows, uncomment next line to ignore bower_components
+# (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
+#bower_components/
+
+# RIA/Silverlight projects
+Generated_Code/
+
+# Backup & report files from converting an old project file
+# to a newer Visual Studio version. Backup files are not needed,
+# because we have git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+ServiceFabricBackup/
+*.rptproj.bak
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# Business Intelligence projects
+*.rdl.data
+*.bim.layout
+*.bim_*.settings
+*.rptproj.rsuser
+*- [Bb]ackup.rdl
+*- [Bb]ackup ([0-9]).rdl
+*- [Bb]ackup ([0-9][0-9]).rdl
+
+# Microsoft Fakes
+FakesAssemblies/
+
+# GhostDoc plugin setting file
+*.GhostDoc.xml
+
+# Node.js Tools for Visual Studio
+.ntvs_analysis.dat
+node_modules/
+
+# Visual Studio 6 build log
+*.plg
+
+# Visual Studio 6 workspace options file
+*.opt
+
+# Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
+*.vbw
+
+# Visual Studio 6 auto-generated project file (contains which files were open etc.)
+*.vbp
+
+# Visual Studio 6 workspace and project file (working project files containing files to include in project)
+*.dsw
+*.dsp
+
+# Visual Studio 6 technical files
+
+# Visual Studio LightSwitch build output
+**/*.HTMLClient/GeneratedArtifacts
+**/*.DesktopClient/GeneratedArtifacts
+**/*.DesktopClient/ModelManifest.xml
+**/*.Server/GeneratedArtifacts
+**/*.Server/ModelManifest.xml
+_Pvt_Extensions
+
+# Paket dependency manager
+.paket/paket.exe
+paket-files/
+
+# FAKE - F# Make
+.fake/
+
+# CodeRush personal settings
+.cr/personal
+
+# Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
+
+# Cake - Uncomment if you are using it
+# tools/**
+# !tools/packages.config
+
+# Tabs Studio
+*.tss
+
+# Telerik's JustMock configuration file
+*.jmconfig
+
+# BizTalk build output
+*.btp.cs
+*.btm.cs
+*.odx.cs
+*.xsd.cs
+
+# OpenCover UI analysis results
+OpenCover/
+
+# Azure Stream Analytics local run output
+ASALocalRun/
+
+# MSBuild Binary and Structured Log
+*.binlog
+
+# NVidia Nsight GPU debugger configuration file
+*.nvuser
+
+# MFractors (Xamarin productivity tool) working folder
+.mfractor/
+
+# Local History for Visual Studio
+.localhistory/
+
+# Visual Studio History (VSHistory) files
+.vshistory/
+
+# BeatPulse healthcheck temp database
+healthchecksdb
+
+# Backup folder for Package Reference Convert tool in Visual Studio 2017
+MigrationBackup/
+
+# Ionide (cross platform F# VS Code tools) working folder
+.ionide/
+
+# Fody - auto-generated XML schema
+FodyWeavers.xsd
+
+# VS Code files for those working on multiple tools
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# Windows Installer files from build outputs
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# JetBrains Rider
+*.sln.iml
+
+### Unity ###
+# This .gitignore file should be placed at the root of your Unity project directory
+#
+# Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# MemoryCaptures can get excessive in size.
+# They also could contain extremely sensitive data
+/[Mm]emoryCaptures/
+
+# Recordings can get excessive in size
+/[Rr]ecordings/
+
+# Uncomment this line if you wish to ignore the asset store tools plugin
+# /[Aa]ssets/AssetStoreTools*
+
+# Autogenerated Jetbrains Rider plugin
+/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Visual Studio cache directory
+
+# Gradle cache directory
+.gradle/
+
+# Autogenerated VS/MD/Consulo solution and project files
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.booproj
+*.svd
+*.mdb
+
+# Unity3D generated meta files
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity3D generated file on crash reports
+sysinfo.txt
+
+# Builds
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Crashlytics generated file
+crashlytics-build.properties
+
+# Packed Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Temporary auto-generated Android Assets
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# End of https://www.toptal.com/developers/gitignore/api/unity,csharp
