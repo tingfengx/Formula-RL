@@ -147,8 +147,10 @@ public abstract class Objective : MonoBehaviour
                 return;
             }
 
+            // Debug.Log(NumberOfActivePickupsRemaining());
             if (NumberOfActivePickupsRemaining() != 0) return;
 
+            // End of game
             ReachCheckpoint(0);
             ResetPickups();
             TimeDisplay.OnUpdateLap();

@@ -97,6 +97,8 @@ namespace KartGame.AI
         bool m_EndEpisode;
         float m_LastAccumulatedReward;
 
+        // HashSet<int> passed_checkpoints = new HashSet<int>();
+
         void Awake()
         {
             m_Kart = GetComponent<ArcadeKart>();
@@ -148,7 +150,9 @@ namespace KartGame.AI
         }
 
         void OnTriggerEnter(Collider other)
-        {
+        {   
+            // return; 
+
             var maskedValue = 1 << other.gameObject.layer;
             var triggered = maskedValue & CheckpointMask;
 
@@ -164,9 +168,6 @@ namespace KartGame.AI
                 AddReward(PassCheckpointReward);
                 m_CheckpointIndex = index;
             }
-            // else{
-            //     // 狠狠的punish
-            // }
         }
 
         void FindCheckpointIndex(Collider checkPoint, out int index)

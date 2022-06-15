@@ -13,22 +13,26 @@ namespace KartGame.UI
 
         public void LoadTargetScene() 
         {
-            string[] paths = ModelFileManager.GetPaths();
-            for (int i = 0; i < paths.Length; i++)
+            if(SceneName.Equals("MainScene")) // only check whether models are imported at the menu
             {
-                if(String.IsNullOrEmpty(paths[i]))
+                string[] paths = ModelFileManager.GetPaths();
+                for (int i = 0; i < paths.Length; i++)
                 {
+                    if(String.IsNullOrEmpty(paths[i]))
+                    {
 
-                    bool decision = EditorUtility.DisplayDialog(
-                        "Model not imported", // title
-                        "Please select the model from the disk", // description
-                        "OK" // OK button
-                        // "Cancel" // Cancel button
-                    );
+                        bool decision = EditorUtility.DisplayDialog(
+                            "Model not imported", // title
+                            "Please select the model from the disk", // description
+                            "OK" // OK button
+                            // "Cancel" // Cancel button
+                        );
 
-                    return; 
+                        return; 
+                    }
                 }
             }
+          
 
             SceneManager.LoadSceneAsync(SceneName);
         }

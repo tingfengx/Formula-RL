@@ -1,7 +1,7 @@
 ﻿﻿using System.Collections;
 using UnityEngine;
 
-public class ObjectiveReachTargets : Objective
+public class OpponentObjectiveReachTargets : Objective
 {
 
     [Tooltip("Choose whether you need to collect all pickups or only a minimum amount")]
@@ -19,13 +19,11 @@ public class ObjectiveReachTargets : Objective
     IEnumerator Start()
     {
    
-        TimeManager.OnSetTime(totalTimeInSecs, isTimed, gameMode);
+        // TimeManager.OnSetTime(totalTimeInSecs, isTimed, gameMode);
         
         yield return new WaitForEndOfFrame();
 
-        title = "Collect " +
-                (mustCollectAllPickups ? "all the" : pickupsToCompleteObjective.ToString()) + " " +
-                targetName + "s";
+        title = "Opponent's progress";
         
         if (mustCollectAllPickups)
             pickupsToCompleteObjective = NumberOfPickupsTotal;
@@ -44,18 +42,10 @@ public class ObjectiveReachTargets : Objective
         m_PickupTotal = NumberOfPickupsTotal - remaining;
         int targetRemaining = mustCollectAllPickups ? remaining : pickupsToCompleteObjective - m_PickupTotal;
 
-        // update the objective text according to how many enemies remain to kill
         if (targetRemaining == 0)
         {
             CompleteObjective(string.Empty, GetUpdatedCounterAmount(),
-                "Objective complete: " + title);
-        }
-        else if (targetRemaining == 1)
-        {
-            string notificationText = notificationPickupsRemainingThreshold >= targetRemaining
-                ? "One " + targetName + " left"
-                : string.Empty;
-            UpdateObjective(string.Empty, GetUpdatedCounterAmount(), notificationText);
+                "Your Opponent Completed Objective complete: " + title);
         }
         else if (targetRemaining > 1)
         {
@@ -66,7 +56,7 @@ public class ObjectiveReachTargets : Objective
 
             UpdateObjective(string.Empty, GetUpdatedCounterAmount(), notificationText);
         }
-
+    
     }
 
     public override string GetUpdatedCounterAmount()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class ModelFileManager : MonoBehaviour
 {
 
     public int id;
-    public static string[] paths = new string[4];
+    public static string[] paths = new string[2];
 
     public TextMeshProUGUI Textfield;
     string curPath;
@@ -18,7 +19,9 @@ public class ModelFileManager : MonoBehaviour
     public void OpenFileExplorer()
     {
         curPath = EditorUtility.OpenFilePanel("Select your model","", "onnx");
-
+        if(String.IsNullOrEmpty(curPath))
+            return;
+        
         StartCoroutine(GetName());
     }
 

@@ -134,6 +134,7 @@ public class GameFlowManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.2f);
         for (int i = 0; i < m_ObjectiveManager.Objectives.Count; i++)
         {
+            // Debug.Log(m_ObjectiveManager.Objectives[i]);
            if (m_ObjectiveManager.Objectives[i].displayMessage)m_ObjectiveManager.Objectives[i].displayMessage.Display();
            yield return new WaitForSecondsRealtime(1f);
         }
@@ -165,9 +166,13 @@ public class GameFlowManager : MonoBehaviour
             }
         }
         else
-        {
-            if (m_ObjectiveManager.AreAllObjectivesCompleted())
+        {  
+            if(m_ObjectiveManager.IsPlayerObjectiveCompleted())
                 EndGame(true);
+            else if(m_ObjectiveManager.AreOpponentsObjectiveCompleted())
+                EndGame(false);
+
+            // if (m_ObjectiveManager.AreAllObjectivesCompleted())
 
             if (m_TimeManager.IsFinite && m_TimeManager.IsOver)
                 EndGame(false);
