@@ -141,7 +141,14 @@
         <div class="row">
           <div class="col-7 mb-4 position-relative text-center mx-auto">
             <h2 class="font-weight-bold text-center">Our Experiment Settings and Results</h2>
-            <p>TODO abababababababababbababababa abababababababababababab aaabababababab</p>
+            <p>
+              Reward design impact hugely on how the model behaves. We incrementally tested how reward functions are impacting the model's behaviors, and did ablation studies to find out the most important factors in our reward design. We defined 4 objectives that we want the model to achieve: <br>
+              1) <b>Correctness</b>: kart should pass checkpoints in the correct order, <br>
+              2) <b>Speed</b>: kart should finish a lap as fast as possible, <br>
+              3) <b>Crash Avoidance</b>: kart should reduce crashes as much as possible, <br>
+              4) <b>Direction</b>: kart should always heading towards next checkpoint. <br>
+              The details of experimentation results can be found in our report, the demo of 3 key experiments is shown below:
+            </p>
           </div>
 
         </div>
@@ -150,37 +157,61 @@
 
           <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
             <div class="blog_entry">
-              <iframe width="100%" height="197px" src="https://www.youtube.com/embed/MC6p9RtC3dI?autoplay=1&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="100%" height="197px" src="https://www.youtube.com/embed/hBpP6hgduA0?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <div class="p-4 bg-white">
-                <h3>Far far away, behind the word mountains</h3>
-                <span class="date">April 25, 2019</span>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <h3>No Reward</h3>
+                <!-- <span class="date">April 25, 2019</span> -->
+                <p>Since no reward is given, the kart will act randomly.</p>
               </div>
             </div>
           </div>
           <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
             <div class="blog_entry">
-              <video class="img-fluid" autoplay>
-                <source src="mp4/Formula-RL-Demo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+              <iframe width="100%" height="197px" src="https://www.youtube.com/embed/vU4RxSMXwnE?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <div class="p-4 bg-white">
-                <h3>Far far away, behind the word mountains</h3>
-                <span class="date">April 25, 2019</span>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <h3>Correctness + Crash Avoidance</h3>
+                <!-- <span class="date">April 25, 2019</span> -->
+                <p>This reward design gives nearly the same bad performance as no reward. We speculate that since poorly-performed model will have low chance passing through checkpoints, the model barely gets reward during training.</p>
               </div>
             </div>
           </div>
           <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
             <div class="blog_entry">
-              <video class="img-fluid" autoplay>
-                <source src="mp4/Formula-RL-Demo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+              <iframe width="100%" height="197px" src="https://www.youtube.com/embed/upP-YAF0jlw?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <div class="p-4 bg-white">
-                <h3>Far far away, behind the word mountains</h3>
-                <span class="date">April 25, 2019</span>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <h3>Correctness + Crash Avoidance + Speed</h3>
+                <!-- <span class="date">April 25, 2019</span> -->
+                <p>This reward design also gives bad performance similar to no reward with the same reason.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
+            <div class="blog_entry">
+              <iframe width="100%" height="197px" src="https://www.youtube.com/embed/VQJ-4sBQmTY?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="p-4 bg-white">
+                <h3>Correctness + Crash Avoidance + Direction</h3>
+                <!-- <span class="date">April 25, 2019</span> -->
+                <p>This reward design improves the performance a lot since it guides the kart when it's driving between checkpoints. However, without speed reward, the kart drives in a slow speed.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
+            <div class="blog_entry">
+              <iframe width="100%" height="197px" src="https://www.youtube.com/embed/83YGXpgRZtc?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="p-4 bg-white">
+                <h3>Correctness + Crash Avoidance + Speed + Direction</h3>
+                <!-- <span class="date">April 25, 2019</span> -->
+                <p>This reward design achieves relatively good performance since it guides the kart between checkpoints and considered the speed factor. However, it collides more since the kart runs faster in the track.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
+            <div class="blog_entry">
+              <iframe width="100%" height="197px" src="https://www.youtube.com/embed/RQeJ_91o3bk?mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="p-4 bg-white">
+                <h3>Crash Avoidance + Improved Speed + Direction</h3>
+                <!-- <span class="date">April 25, 2019</span> -->
+                <p>This reward design achieves similarly good performance and the kart drives smoothly. More future works can be done to finetune this reward function.</p>
               </div>
             </div>
           </div>
